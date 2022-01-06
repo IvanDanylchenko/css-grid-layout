@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 1110px) {
   .container-grid {
-    grid-template: 75px 1fr 417px / minmax(414px, auto);
+    grid-template: 75px 1fr 483px / minmax(414px, auto);
     grid-template-areas: "header" "main" "footer";
   }
 }
@@ -439,7 +439,8 @@ h4 {
 
 @media screen and (max-width: 1110px) {
   .user-profile li:hover {
-    display: none;
+    border-top: none;
+    padding-top: 0;
   }
 }
 
@@ -464,12 +465,14 @@ h4 {
   border-radius: 16px;
   text-align: left;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1110px) {
   .trust {
     grid-template: auto auto auto/ 1fr;
     border-radius: 0;
+    margin-bottom: 0;
     text-align: center;
   }
 }
@@ -499,7 +502,6 @@ h4 {
   .link-google {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    padding-top: 32px;
     justify-self: center;
   }
 }
@@ -516,5 +518,184 @@ h4 {
     grid-row: 3 / 4;
     padding: 26px 0 34px 0;
     justify-self: center;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1d2830;
+  display: grid;
+  grid-template: 336px 81px / 1fr 1110px 1fr;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer {
+    grid-template: 404px 79px / minmax(414px, auto);
+  }
+}
+
+.footer-content {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template: 256px / repeat(4, 277.5px);
+  padding-top: 80px;
+  color: var(--color-button);
+  text-align: left;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-content {
+    grid-column: 1 / 4;
+    grid-template: 144px 212px / 46px 306px 19px 46px;
+    padding-top: 48px;
+    justify-self: center;
+  }
+}
+
+.footer-content i {
+  display: none;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-content i {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: inline;
+  }
+}
+
+.footer-content li {
+  padding-bottom: 24px;
+}
+
+.footer-content h4 {
+  padding: initial;
+}
+
+.footer-content h4:nth-child(1),
+.footer-company {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.footer-content h4:nth-child(4),
+.footer-support {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.footer-content h4:nth-child(7),
+.footer-legal {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.footer-content h4:nth-child(10),
+.footer-app {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-content h4:nth-child(-n + 7) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .footer-content h4:nth-child(4),
+  i:nth-child(5) {
+    padding-top: 48px;
+  }
+
+  .footer-content h4:nth-child(7),
+  i:nth-child(8) {
+    padding-top: 96px;
+  }
+
+  .footer-content h4:nth-child(10),
+  .footer-app {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .footer-app li:nth-child(1) {
+    padding-bottom: 16px;
+  }
+}
+
+.footer-company,
+.footer-support,
+.footer-legal,
+.footer-app {
+  padding-top: 40px;
+}
+
+.footer-content a {
+  color: var(--color-button);
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-company,
+  .footer-support,
+  .footer-legal {
+    display: none;
+  }
+
+  .footer-app {
+    padding-top: 32px;
+  }
+}
+
+.footer-socil-nerworks {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template: 1fr / 1fr 555px 355px repeat(3, 56px) 32px 1fr;
+  align-items: center;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-socil-nerworks {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+.footer-socil-nerworks h5 {
+  grid-column: 2 / 3;
+  color: #d9dbe1;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-socil-nerworks h5 {
+    grid-column: 2 / 3;
+    padding-left: 47px;
+  }
+}
+.footer-socil-nerworks a {
+  grid-row: 1 / 2;
+}
+
+.footer-socil-nerworks a:nth-child(2) {
+  grid-column: 4 / 5;
+}
+
+.footer-socil-nerworks a:nth-child(3) {
+  grid-column: 5 / 6;
+}
+
+.footer-socil-nerworks a:nth-child(4) {
+  grid-column: 6 / 7;
+}
+
+.footer-socil-nerworks a:nth-child(5) {
+  grid-column: 7 / 8;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer-socil-nerworks a {
+    display: none;
   }
 }
