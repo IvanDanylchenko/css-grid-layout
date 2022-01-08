@@ -7,6 +7,11 @@
   --color-background-symbol: #796eff;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +25,7 @@
 
 @media screen and (max-width: 1110px) {
   .container-grid {
-    grid-template: 75px 1fr 483px / minmax(414px, auto);
+    grid-template: 75px 1fr 483px / minmax(320px, auto);
     grid-template-areas: "header" "main" "footer";
   }
 }
@@ -164,12 +169,13 @@
 
 @media screen and (max-width: 1110px) {
   .main {
-    grid-template: 1fr / minmax(414px, auto);
+    grid-template: 1fr / minmax(320px, auto);
     padding-top: 56px;
   }
 
   .item-content {
     grid-column: 1 / 2;
+    padding-bottom: 56px;
   }
 
   .icons {
@@ -239,7 +245,7 @@
   }
 
   .basic {
-    grid-template: auto auto / 1fr;
+    grid-template: auto / minmax(320px, auto);
     justify-items: center;
     text-align: center;
   }
@@ -250,15 +256,14 @@
   }
 
   .basic h2 {
-    padding-top: 0;
+    padding: 0;
     font-size: 1.125rem;
     line-height: 24px;
-    padding: 0 125px;
     letter-spacing: -0.03em;
   }
 
   .basic p {
-    padding: 69px 60px 0 60px;
+    padding-top: 64px;
     letter-spacing: -0.03em;
   }
 
@@ -269,7 +274,7 @@
   }
 
   .button-basic a {
-    padding: 18px 98px;
+    padding: 18px 95px;
   }
 
   .basic img {
@@ -324,7 +329,7 @@
 
 @media screen and (max-width: 1110px) {
   .benefits h2 {
-    padding-top: 54px;
+    padding-top: 56px;
     font-size: 1.125rem;
     line-height: 24px;
     color: var(--color-text-basic);
@@ -341,7 +346,7 @@
 
 @media screen and (max-width: 1110px) {
   .benefits p {
-    padding: 144px 35px 0 35px;
+    padding-top: 144px;
   }
 }
 
@@ -530,7 +535,7 @@ h4 {
 
 @media screen and (max-width: 1110px) {
   .footer {
-    grid-template: 404px 79px / minmax(414px, auto);
+    grid-template: 404px 79px / minmax(320px, auto);
   }
 }
 
@@ -547,7 +552,7 @@ h4 {
 @media screen and (max-width: 1110px) {
   .footer-content {
     grid-column: 1 / 4;
-    grid-template: 144px 212px / 46px 306px 19px 46px;
+    grid-template: 144px 212px / 22px 257px 19px 22px;
     padding-top: 48px;
     justify-self: center;
   }
@@ -660,17 +665,19 @@ h4 {
   .footer-socil-nerworks {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    grid-template: 1fr / minmax(auto, 1440px);
   }
 }
 
-.footer-socil-nerworks h5 {
+.footer-socil-nerworks > span {
   grid-column: 2 / 3;
   color: #d9dbe1;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 1110px) {
-  .footer-socil-nerworks h5 {
-    grid-column: 2 / 3;
+  .footer-socil-nerworks > span {
+    grid-column: 1 / 2;
     padding-left: 47px;
   }
 }
